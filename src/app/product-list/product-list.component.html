@@ -1,9 +1,23 @@
 <h2>Products</h2>
-<div *ngFor="let product of products"></div>
+<div *ngFor="let p of products">
+    <h3>
+      <a [title]="p.description + '\nPrice: ' + p.price + ':-'"
+          [routerLink]="['/products', productId]">
+        {{p.name}}
 
-<h3>
-  {{product.name  }}
-</h3>
+      </a>
+      <p *ngIf="p.canBeShared">
+          <button (click)=share()>
+            Share
+          </button>
+      </p>
+      <app-product-alerts
+        [pr]="p"
+        (notify) = "onNotify()">
+      </app-product-alerts>
+
+    </h3>
+  </div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
