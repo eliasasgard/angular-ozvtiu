@@ -24,7 +24,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductdetailsComponent,
     ProductDetailsComponent
   ],
   bootstrap: [ AppComponent ]
