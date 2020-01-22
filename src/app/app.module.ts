@@ -10,7 +10,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './course/course.component';
-import { CourseService } from './course/course-service.service';
+import { CoursesService } from './courses/courses.service';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { CourseService } from './course/course-service.service';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CourseComponent }
+      { path: 'cart', component: CoursesComponent }
     ])
   ],
   declarations: [
@@ -28,9 +28,9 @@ import { CourseService } from './course/course-service.service';
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    CourseComponent
+    CoursesComponent
   ],
-  providers: [ CourseService ],
+  providers: [ CoursesService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
