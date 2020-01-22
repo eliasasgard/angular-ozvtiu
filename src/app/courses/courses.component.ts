@@ -14,7 +14,7 @@ import { CoursesService } from './courses.service';
   styleUrls: ['./courses.component.css']*/
   
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent {
 
   title = "Courses";
   courses;
@@ -23,7 +23,5 @@ export class CoursesComponent implements OnInit {
     this.courses = service.getCourses();
   }
 
-  ngOnInit() {
-  }
 
 }
