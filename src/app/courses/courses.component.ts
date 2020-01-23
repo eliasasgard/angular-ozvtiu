@@ -18,7 +18,7 @@ export class CoursesComponent {
 
   title = "Courses";
   courses;
-  constructor(service: CoursesService) { 
+  constructor(service: CoursesService) {
     
     this.courses = service.getCourses();
   }
